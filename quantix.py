@@ -13,4 +13,11 @@ def main():
     screen_height = root.winfo_screenheight()
     width = int(screen_width * 0.7)
     height = int(screen_height * 0.7)
-        
+
+    #Center the window on the screen.
+    x_offset = int((screen_width - width) / 2)
+    y_offset = int((screen_height - height) / 2) 
+
+    #Set the initial position and the size of the window.
+    root.geometry(f'{width}x{height}+{x_offset}+{y_offset}')
+       
