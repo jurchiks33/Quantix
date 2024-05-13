@@ -24,7 +24,12 @@ def main():
     navbar = ttk.Frame(root)
     navbar.pack(side="top", fill="x")
 
-    #Start Tkinetr event loop.
+    # Buttons for the pages
+    pages = 7
+    for i in range(1, pages + 1):
+        button = ttk.Button(navbar, text=f"Page {i}", command=lambda i=i: load_page(i))
+        button.pack(side="left")
+
     root.mainloop()
 
 if __name__ == "__main__":
