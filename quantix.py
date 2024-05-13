@@ -1,9 +1,13 @@
 import tkinter as tk
 from tkinter import ttk
+import page1
+import page2
 
-def load_page(page):
-    #Placeholder to load different pages.
-    print(f'Loading page {page}')
+def load_page(root, page):
+    if page == 1:
+        page1.create_page(root)
+    elif page == 2:
+        page2.create_page(root)
 
 def main():
     #Main application window.
