@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 
+# Import page modules
 import page1
 import page2
 
@@ -9,16 +10,16 @@ def clear_frame(frame):
     for widget in frame.winfo_children():
         widget.destroy()
 
-def load_page(root, page):
+def load_page(content_frame, page):
     # Clear existing content
-    clear_frame(root)
+    clear_frame(content_frame)
     
     # Load the respective page
     if page == 1:
-        page1.create_page(root)
+        page1.create_page(content_frame)
     elif page == 2:
-        page2.create_page(root)
-
+        page2.create_page(content_frame)
+    #below coming more pages later
 
 def main():
     root = tk.Tk()
@@ -37,10 +38,14 @@ def main():
     navbar = ttk.Frame(root)
     navbar.pack(side="top", fill="x")
 
+    # Content frame
+    content_frame = tk.Frame(root, bg='#1a1a1a')  # using tk.Frame to allow background setting
+    content_frame.pack(fill='both', expand=True)
+
     # Buttons for the pages
     pages = 7
     for i in range(1, pages + 1):
-        button = ttk.Button(navbar, text=f"Page {i}", command=lambda i=i: load_page(root, i))
+        button = ttk.Button(navbar, text=f"Page {i}", command=lambda i=i: load_page(content_frame, i))
         button.pack(side="left")
 
     root.mainloop()
