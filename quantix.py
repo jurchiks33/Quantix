@@ -1,4 +1,4 @@
-#quantix.py
+# quantix.py
 
 import tkinter as tk
 from tkinter import ttk
@@ -10,6 +10,10 @@ import page3
 import page4
 import page5
 import page6
+import page7
+import page8
+import page9
+import page10
 
 def clear_frame(frame):
     # Destroy all widgets from frame
@@ -33,7 +37,15 @@ def load_page(content_frame, page):
         page5.create_page(content_frame)
     elif page == 6:
         page6.create_page(content_frame)
-    #add more pages here.
+    elif page == 7:
+        page7.create_page(content_frame)
+    elif page == 8:
+        page8.create_page(content_frame)
+    elif page == 9:
+        page9.create_page(content_frame)
+    elif page == 10:
+        page10.create_page(content_frame)
+    # Add more pages here.
 
 def main():
     root = tk.Tk()
@@ -56,16 +68,30 @@ def main():
     content_frame = tk.Frame(root, bg='#1a1a1a')  # using tk.Frame to allow background setting
     content_frame.pack(fill='both', expand=True)
 
+    # Page names
+    page_names = [
+        "Dashboard", 
+        "Analytics", 
+        "Reports", 
+        "Settings", 
+        "Profile", 
+        "Notifications", 
+        "Messages", 
+        "Tasks", 
+        "Calendar", 
+        "Help"
+    ]
+
     # Buttons for the pages
-    pages = 10
-    for i in range(1, pages + 1):
-        button = ttk.Button(navbar, text=f"Page {i}", command=lambda i=i: load_page(content_frame, i))
+    for i, name in enumerate(page_names, start=1):
+        button = ttk.Button(navbar, text=name, command=lambda i=i: load_page(content_frame, i))
         button.pack(side="left")
 
-    #Load Page 1 as a default page.
+    # Load Page 1 as a default page.
     load_page(content_frame, 1)
 
     root.mainloop()
 
 if __name__ == "__main__":
     main()
+
