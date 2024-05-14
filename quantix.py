@@ -7,6 +7,9 @@ from tkinter import ttk
 import page1
 import page2
 import page3
+import page4
+import page5
+import page6
 
 def clear_frame(frame):
     # Destroy all widgets from frame
@@ -24,7 +27,13 @@ def load_page(content_frame, page):
         page2.create_page(content_frame)
     elif page == 3:
         page3.create_page(content_frame)
-    #below coming more pages later
+    elif page == 4:
+        page4.create_page(content_frame)
+    elif page == 5:
+        page5.create_page(content_frame)
+    elif page == 6:
+        page6.create_page(content_frame)
+    #add more pages here.
 
 def main():
     root = tk.Tk()
