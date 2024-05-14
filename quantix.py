@@ -6,6 +6,7 @@ from tkinter import ttk
 # Import page modules
 import page1
 import page2
+import page3
 
 def clear_frame(frame):
     # Destroy all widgets from frame
@@ -21,6 +22,8 @@ def load_page(content_frame, page):
         page1.create_page(content_frame)
     elif page == 2:
         page2.create_page(content_frame)
+    elif page == 3:
+        page3.create_page(content_frame)
     #below coming more pages later
 
 def main():
@@ -45,10 +48,13 @@ def main():
     content_frame.pack(fill='both', expand=True)
 
     # Buttons for the pages
-    pages = 7
+    pages = 10
     for i in range(1, pages + 1):
         button = ttk.Button(navbar, text=f"Page {i}", command=lambda i=i: load_page(content_frame, i))
         button.pack(side="left")
+
+    #Load Page 1 as a default page.
+    load_page(content_frame, 1)
 
     root.mainloop()
 
