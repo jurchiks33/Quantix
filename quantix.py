@@ -12,7 +12,7 @@ import technicalAnalysis
 import spreads
 import beta
 import tasks
-import calendar
+import financialCalendar
 import help
 
 def clear_frame(frame):
@@ -42,7 +42,7 @@ def load_page(content_frame, page):
     elif page == 8:
         tasks.create_page(content_frame)
     elif page == 9:
-        calendar.create_page(content_frame)
+        financialCalendar.create_page(content_frame)
     elif page == 10:
         help.create_page(content_frame)
     # Add more pages here.
@@ -78,7 +78,7 @@ def main():
         "Spreads", 
         "Beta", 
         "Tasks", 
-        "Calendar", 
+        "Financial Calendar", 
         "Help"
     ]
 
