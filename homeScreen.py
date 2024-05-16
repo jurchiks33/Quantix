@@ -2,6 +2,8 @@
 
 import tkinter as tk
 from tkinter import ttk
+import datetime
+import pytz
 
 def create_page(content_frame, load_page):
     # Create a background frame
