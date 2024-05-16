@@ -3,7 +3,7 @@
 import tkinter as tk
 from tkinter import ttk
 
-def create_page(content_frame):
+def create_page(content_frame, load_page):
     # Create a background frame
     frame = tk.Frame(content_frame, bg='white')
     frame.pack(fill='both', expand=True)
@@ -25,11 +25,5 @@ def create_page(content_frame):
     news_label.pack(pady=10)
 
     # Add more widgets as needed
-    # Button for link to the portfolio(May be remowed since we have it in a nav bar)
-    details_button = ttk.Button(container, text="View Portfolio Details", command=view_portfolio_details)
+    details_button = ttk.Button(container, text="View Portfolio Details", command=lambda: load_page(content_frame, 2))
     details_button.pack(pady=10)
-
-def view_portfolio_details():
-    # Function to handle viewing portfolio details
-    tk.messagebox.showinfo("Portfolio Details", "This feature is under development.")
-

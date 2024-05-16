@@ -26,7 +26,7 @@ def load_page(content_frame, page):
     
     # Load the respective page
     if page == 1:
-        homeScreen.create_page(content_frame)
+        homeScreen.create_page(content_frame, load_page)
     elif page == 2:
         portfolio.create_page(content_frame)
     elif page == 3:
@@ -94,4 +94,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
