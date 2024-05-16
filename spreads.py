@@ -1,4 +1,4 @@
-#page6.py
+#spreads.py
 
 import tkinter as tk
 from tkinter import ttk

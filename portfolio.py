@@ -1,4 +1,4 @@
-# page2.py
+# portfolio.py
 
 import tkinter as tk
 from tkinter import ttk

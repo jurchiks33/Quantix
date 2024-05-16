@@ -1,4 +1,4 @@
-#page3.py
+#watchlist.py
 
 import tkinter as tk
 from tkinter import ttk

@@ -1,4 +1,4 @@
-#page10.py
+#help.py
 
 import tkinter as tk
 from tkinter import ttk
