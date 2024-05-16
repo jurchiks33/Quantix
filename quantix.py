@@ -4,16 +4,16 @@ import tkinter as tk
 from tkinter import ttk
 
 # Import page modules
-import page1
-import page2
-import page3
-import page4
-import page5
-import page6
-import page7
-import page8
-import page9
-import page10
+import homeScreen
+import portfolio
+import watchlist
+import fundamentalAnalysis
+import technicalAnalysis
+import spreads
+import beta
+import tasks
+import calendar
+import help
 
 def clear_frame(frame):
     # Destroy all widgets from frame
@@ -26,25 +26,25 @@ def load_page(content_frame, page):
     
     # Load the respective page
     if page == 1:
-        page1.create_page(content_frame)
+        homeScreen.create_page(content_frame)
     elif page == 2:
-        page2.create_page(content_frame)
+        portfolio.create_page(content_frame)
     elif page == 3:
-        page3.create_page(content_frame)
+        watchlist.create_page(content_frame)
     elif page == 4:
-        page4.create_page(content_frame)
+        fundamentalAnalysis.create_page(content_frame)
     elif page == 5:
-        page5.create_page(content_frame)
+        technicalAnalysis.create_page(content_frame)
     elif page == 6:
-        page6.create_page(content_frame)
+        spreads.create_page(content_frame)
     elif page == 7:
-        page7.create_page(content_frame)
+        beta.create_page(content_frame)
     elif page == 8:
-        page8.create_page(content_frame)
+        tasks.create_page(content_frame)
     elif page == 9:
-        page9.create_page(content_frame)
+        calendar.create_page(content_frame)
     elif page == 10:
-        page10.create_page(content_frame)
+        help.create_page(content_frame)
     # Add more pages here.
 
 def main():
@@ -70,13 +70,13 @@ def main():
 
     # Page names
     page_names = [
-        "Dashboard", 
-        "Analytics", 
-        "Reports", 
-        "Settings", 
-        "Profile", 
-        "Notifications", 
-        "Messages", 
+        "Home Screen", 
+        "Portfolio", 
+        "Watchlist", 
+        "Fundamental analysis", 
+        "Technical analysis", 
+        "Spreads", 
+        "Beta", 
         "Tasks", 
         "Calendar", 
         "Help"
